@@ -46,7 +46,7 @@ for num in range(n):
     inp = input()
     ks = inp.split('"')[1::2]
     rok = int(re.search(r'\d+', inp).group())
-    biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz(ks[0], ks[1], rok))
+    biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz(ks[0].strip(), ks[1].strip(), rok))
 #biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz("Aryan Parekh","Stack", 2016))
 #biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz("J.K Rowling","Harry Potter", 2015))
 
