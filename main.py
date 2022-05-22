@@ -13,14 +13,10 @@ class Biblioteka():
         wynik = []
         i = 0
         for ks in self.lista_ksiazek:
-            #print("('"+ks.tytul+"','"+ks.autor+"')")
             tytuly.append(ks.tytul)
         for t in tytuly:
             ilosci.append(tytuly.count(t))
-        #print(ilosci)
-        #print(len(self.lista_ksiazek))
         for ks in self.lista_ksiazek:
-            #print(ilosci[i])
             w = "('"+ks.tytul+"', '"+ks.autor+"', "+str(ilosci[i])+")"
             i += 1
             wynik.append(w)
@@ -28,7 +24,6 @@ class Biblioteka():
         wynik = sorted(wynik)
         for wyn in wynik:
             print(wyn)
-        #print(set(tytuly))
 
 class Ksiazka():
     def __init__(self,tytul,autor):
@@ -48,10 +43,5 @@ for num in range(n):
     ks = inp.split('"')[1::2]
     rok = int(re.search(r'\d+', inp).group())
     biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz(ks[0].strip(), ks[1].strip(), rok))
-#biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz("Aryan Parekh","Stack", 2016))
-#biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz("J.K Rowling","Harry Potter", 2015))
-#(’Pan Tadeusz ’, ’Adam Mickiewicz ’, 1)
-#(’Quo Vadis ’, ’Henryk Sienkiewicz ’, 2) 
-
 
 biblioteka.dostepne_egz()
