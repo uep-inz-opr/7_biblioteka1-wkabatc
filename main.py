@@ -21,7 +21,7 @@ class Biblioteka():
         #print(len(self.lista_ksiazek))
         for ks in self.lista_ksiazek:
             #print(ilosci[i])
-            w = "('"+ks.tytul+" ', '"+ks.autor+" ', "+str(ilosci[i])+")"
+            w = "('"+ks.tytul+"', '"+ks.autor+"', "+str(ilosci[i])+")"
             i += 1
             wynik.append(w)
         wynik = set(wynik)
@@ -50,6 +50,8 @@ for num in range(n):
     biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz(ks[0].strip(), ks[1].strip(), rok))
 #biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz("Aryan Parekh","Stack", 2016))
 #biblioteka.dodaj_egzemplarz_ksiazki(Egzemplarz("J.K Rowling","Harry Potter", 2015))
+#(’Pan Tadeusz ’, ’Adam Mickiewicz ’, 1)
+#(’Quo Vadis ’, ’Henryk Sienkiewicz ’, 2) 
 
 
 biblioteka.dostepne_egz()
