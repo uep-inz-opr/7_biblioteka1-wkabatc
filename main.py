@@ -25,6 +25,7 @@ class Biblioteka():
             i += 1
             wynik.append(w)
         wynik = set(wynik)
+        wynik = sorted(wynik)
         for wyn in wynik:
             print(wyn)
         #print(set(tytuly))
