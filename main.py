@@ -21,7 +21,7 @@ class Biblioteka():
         #print(len(self.lista_ksiazek))
         for ks in self.lista_ksiazek:
             #print(ilosci[i])
-            w = "('"+ks.tytul+"','"+ks.autor+"',"+str(ilosci[i])+")"
+            w = "('"+ks.tytul+" ', '"+ks.autor+" ', "+str(ilosci[i])+")"
             i += 1
             wynik.append(w)
         wynik = set(wynik)
